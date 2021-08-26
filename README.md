@@ -3,6 +3,7 @@ A ddns script in fish for cloudflare
 ========
 # usage
   ./app.fish serve
+  and if things work nice it will update your record each hour
 # Things to do before hung up
  ```
  1.mofidy config file in "/etc/blueddns.conf"
