@@ -11,7 +11,7 @@ A ddns script in fish for cloudflare
     [Unit]
     Description=blueddns
     After=network.target
-    StartLimitIntervalSec=5
+    StartLimitIntervalSec=60s
     [Service]
     User=root
     WorkingDirectory=/root
@@ -19,8 +19,6 @@ A ddns script in fish for cloudflare
     StandardOutput=syslog
     StandardError=syslog
     SyslogIdentifier=blueddns
-    Restart=always
-    RestartSec=1
     [Install]
     WantedBy=multi-user.target
  3. modify the script file to meet your needs

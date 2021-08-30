@@ -12,7 +12,6 @@ function __main__
     set authkey (sed -n '/auth-key=/'p /etc/blueddns.conf | sed 's/auth-key=//g')
     echo "curl -X PUT "https://api.cloudflare.com/client/v4/zones/$zoneid/dns_records/$dnsid" -H "X-Auth-Email: $email" -H "X-Auth-Key: $authkey" -H "Content-Type: application/json" --data '{"type":"A","name":"$domain","content":"$myip","proxied":false}'"
      curl -X PUT "https://api.cloudflare.com/client/v4/zones/$zoneid/dns_records/$dnsid" -H "X-Auth-Email: $email" -H "X-Auth-Key: $authkey" -H "Content-Type: application/json" --data '{"type":"A","name":"'$domain'","content":"'$myip'","proxied":false}'
-     sleep 60m
   end
 end
 #app_info:blueDDNS
@@ -45,4 +44,4 @@ case '*'
   echo "serve [start the service]"
 end
 #blueDDNS.end
-#build time UTC = 2021-08-26_02:02:28
+#build time UTC = 2021-08-30_04:26:39
