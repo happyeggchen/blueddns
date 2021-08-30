@@ -19,6 +19,8 @@ A ddns script in fish for cloudflare
     StandardOutput=syslog
     StandardError=syslog
     SyslogIdentifier=blueddns
+    Restart=on-failure
+    RestartSec=1
     [Install]
     WantedBy=multi-user.target
  3. modify the script file to meet your needs
