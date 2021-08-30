@@ -35,7 +35,7 @@ switch $argv[1]
 case myip
   getip ;; echo $myip
 case install
-  install $argv[2]
+  blueddnsinstall $argv[2]
 case config
 case serve
   __main__
@@ -46,4 +46,4 @@ case '*'
   echo "serve [start the service]"
 end
 #blueDDNS.end
-#build time UTC = 2021-08-30_10:16:01
+#build time UTC = 2021-08-30_10:24:01

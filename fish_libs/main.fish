@@ -17,7 +17,7 @@ switch $argv[1]
 case myip
   getip ;; echo $myip
 case install
-  install $argv[2]
+  blueddnsinstall $argv[2]
 case config
 case serve
   __main__

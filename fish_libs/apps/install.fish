@@ -1,4 +1,4 @@
-function install
+function blueddnsinstall
 switch $argv
 case purge
   sudo rm /usr/bin/blueddns
