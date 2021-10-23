@@ -8,6 +8,7 @@ case purge
   sudo rm /usr/bin/blueddns
   sudo rm /etc/blueddns.conf
 end
+end
 function __main__
   while test "-0-" = "-0-"
   getip
@@ -22,10 +23,6 @@ function __main__
      end
   end
 end
-#app_info:blueDDNS
-#app_version:2021-8-26-b1
-#by tsingkwai
-#blueDDNS.start
 if test -e /etc/blueddns.conf
   else
     sudo echo "zone-id=" > /etc/blueddns.conf
@@ -51,5 +48,4 @@ case '*'
   echo "install (purge)[purge blueddns]"
   echo "serve [start the service]"
 end
-#blueDDNS.end
-#build time UTC = 2021-10-23_04:32:53
+#build time UTC = 2021-10-23_07:50:36

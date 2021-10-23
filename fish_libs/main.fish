@@ -1,7 +1,3 @@
-#app_info:blueDDNS
-#app_version:2021-8-26-b1
-#by tsingkwai
-#blueDDNS.start
 if test -e /etc/blueddns.conf
   else
     sudo echo "zone-id=" > /etc/blueddns.conf
@@ -27,4 +23,3 @@ case '*'
   echo "install (purge)[purge blueddns]"
   echo "serve [start the service]"
 end
-#blueDDNS.end
