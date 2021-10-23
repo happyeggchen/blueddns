@@ -2,6 +2,12 @@
 function getip
   set -g myip (curl -s -L https://api.ipify.org/)
 end
+function blueddnsinstall
+switch $argv
+case purge
+  sudo rm /usr/bin/blueddns
+  sudo rm /etc/blueddns.conf
+end
 function __main__
   while test "-0-" = "-0-"
   getip
@@ -46,4 +52,4 @@ case '*'
   echo "serve [start the service]"
 end
 #blueDDNS.end
-#build time UTC = 2021-08-30_10:24:01
+#build time UTC = 2021-10-23_04:32:53
