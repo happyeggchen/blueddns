@@ -1,14 +1,5 @@
-#!/usr/bin/fish
-function getip
-  set -g myip (curl -s -L https://api.ipify.org/)
-end
-function blueddnsinstall
-switch $argv
-case purge
-  sudo rm /usr/bin/blueddns
-  sudo rm /etc/blueddns.conf
-end
-end
+#!/usr/bin/env fish
+
 function __main__
   while test "-0-" = "-0-"
   getip
@@ -23,6 +14,20 @@ function __main__
      end
   end
 end
+
+function getip
+  set -g myip (curl -s -L https://api.ipify.org/)
+end
+
+function blueddnsinstall
+switch $argv
+case purge
+  sudo rm /usr/bin/blueddns
+  sudo rm /etc/blueddns.conf
+end
+end
+
+echo Build_Time_UTC=2022-02-06_09:12:01
 if test -e /etc/blueddns.conf
   else
     sudo echo "zone-id=" > /etc/blueddns.conf
@@ -48,4 +53,3 @@ case '*'
   echo "install (purge)[purge blueddns]"
   echo "serve [start the service]"
 end
-#build time UTC = 2021-10-23_07:50:36
